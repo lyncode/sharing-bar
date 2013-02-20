@@ -48,3 +48,6 @@ Add the (unique) id to the list of available export formats
     list = bibtex, endnote
 
 **NOTE**: To add the icon image, just add an image at the following path - [jspui-webapp]/image/sharing/endnote.png 
+
+
+![Developed by Lyncode](http://www.lyncode.com/images/lyncode/DevelopedBy.png)
