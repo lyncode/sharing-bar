@@ -15,6 +15,21 @@ There are two major functionalities, (1) the sharing functionality and (2) the e
 > **Works on XMLUI?**
 > No. Only on JSPUI.
 
+Which DSpace version?
+==========
+
+DSpace 3.1 (need support for another version? Please, contact [general@lyncode.com](mailto:general@lyncode.com)
+
+Installation
+==========
+
+Download this package, and using the patch tool apply it to the DSpace 3.1 source.
+
+    cd [dspace source directory]
+    patch -p1 < [unzipped content]/install.diff
+
+---
+
 How to add a new Social Network?
 ==========
 Open the config/modules/sharingbar.cfg file. Establish a new id (unique) for the new social network. For example, "facebook":
@@ -49,4 +64,5 @@ Add the (unique) id to the list of available export formats
 
 **NOTE**: To add the icon image, just add an image at the following path - [jspui-webapp]/image/sharing/endnote.png 
 
+- - - 
 ![Developed by Lyncode](http://www.lyncode.com/images/lyncode/DevelopedBy.png) in partnership with ![RCAAP Project](http://pesquisa.biblioteca.iscte.pt/_img/logos/logo_rcaap.png)
