@@ -34,7 +34,8 @@ How to add a new Social Network?
 ==========
 Open the config/modules/sharingbar.cfg file. Establish a new id (unique) for the new social network. For example, "facebook":
 
-facebook.url = http://www.facebook.com/sharer.php?s=100&p[url]=[$url]&p[title]=[$title]&p[summary]=[$description]
+    facebook.url = http://www.facebook.com/sharer.php?s=100&p[url]=[$url]&p[title]=[$title]&p[summary]=[$description]
+
 there are three possible variables that might be added to the url:
 
 * [$url] - DSpace Item back url
