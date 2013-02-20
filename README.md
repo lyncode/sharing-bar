@@ -1,6 +1,6 @@
 What is?
 ==========
-Sharing and Export Bar is an addon re-developed by Lyncode for the SARI service (RCAAP project) a National project (from Portugal) currently maintained by FCCN. It aims to make easy sharing DSpace items (on social networks) and export them (to bibliographic formats).
+"Sharing and Export Bar" is an addon for DSpace re-developed by [Lyncode](http://www.lyncode.com) for the SARI service ([RCAAP project](http://projeto.rcaap.pt)) a national project (from Portugal) currently maintained by [FCCN](http://www.fccn.pt). It aims to make easy sharing DSpace items (on social networks) and export them (to bibliographic formats).
 
 > **Is it tested?**
 > Yes. Currently there are 25 DSpace respositories using it with positive feedback.
