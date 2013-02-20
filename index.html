@@ -1,0 +1,113 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="chrome=1">
+    <title>Sharing Bar DSpace Addon by lyncode</title>
+
+    <link rel="stylesheet" href="stylesheets/styles.css">
+    <link rel="stylesheet" href="stylesheets/pygment_trac.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <!--[if lt IE 9]>
+    <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+  </head>
+  <body>
+    <div class="wrapper">
+      <header>
+        <h1>Sharing Bar DSpace Addon</h1>
+        <p></p>
+
+        <p class="view"><a href="https://github.com/lyncode/sharing-bar">View the Project on GitHub <small>lyncode/sharing-bar</small></a></p>
+
+
+        <ul>
+          <li><a href="https://github.com/lyncode/sharing-bar/zipball/master">Download <strong>ZIP File</strong></a></li>
+          <li><a href="https://github.com/lyncode/sharing-bar/tarball/master">Download <strong>TAR Ball</strong></a></li>
+          <li><a href="https://github.com/lyncode/sharing-bar">View On <strong>GitHub</strong></a></li>
+        </ul>
+      </header>
+      <section>
+        <h1>What is?</h1>
+
+<p>Sharing and Export Bar is an addon re-developed by Lyncode for the SARI service (RCAAP project) a National project (from Portugal) currently maintained by FCCN. It aims to make easy sharing DSpace items (on social networks) and export them (to bibliographic formats).</p>
+
+<blockquote>
+<p><strong>Is it tested?</strong>
+Yes. Currently there are 25 DSpace respositories using it with positive feedback.</p>
+</blockquote>
+
+<h1>How it works?</h1>
+
+<p>There are two major functionalities, (1) the sharing functionality and (2) the export functionality. </p>
+
+<p><em>Sharing</em>: It looks at the configuration file (config/modules/sharingbar.cfg) and parse all defined social networks (each network has a specific url that must be triggered in order to share the content)
+<em>Export</em>: It uses XOAI core and XSL transformers to export.</p>
+
+<blockquote>
+<p><strong>Works on XMLUI?</strong>
+No. Only on JSPUI.</p>
+</blockquote>
+
+<h1>Which DSpace version?</h1>
+
+<p>DSpace 3.1 (need support for another version? Please, contact <a href="mailto:general@lyncode.com">general@lyncode.com</a>)</p>
+
+<h1>Installation</h1>
+
+<p>Download this package, and using the patch tool apply it to the DSpace 3.1 source.</p>
+
+<pre><code>cd [dspace source directory]
+patch -p1 &lt; [unzipped content]/install.diff
+</code></pre>
+
+<hr><h1>How to add a new Social Network?</h1>
+
+<p>Open the config/modules/sharingbar.cfg file. Establish a new id (unique) for the new social network. For example, "facebook":</p>
+
+<pre><code>facebook.url = http://www.facebook.com/sharer.php?s=100&amp;p[url]=[$url]&amp;p[title]=[$title]&amp;p[summary]=[$description]
+</code></pre>
+
+<p>there are three possible variables that might be added to the url:</p>
+
+<ul>
+<li>[$url] - DSpace Item back url</li>
+<li>[$title] - DSpace item title</li>
+<li>[$summary] = Dspace item abstract</li>
+</ul><p>finally, you must add the (unique) id to the list of possible social networks</p>
+
+<pre><code>list = facebook, twitter, ...
+</code></pre>
+
+<p><strong>NOTE</strong>: To add the icon image, just add an image at the following path - [jspui-webapp]/image/sharing/facebook.png</p>
+
+<h1>How to add a new export format?</h1>
+
+<p>For example, let's add the "endnote" provider.</p>
+
+<p>Create a new XSL similar to config/crosswalks/export/bibtex.xsl to transform the XOAI input into the desired format and add it to config/crosswalks/export directory.
+Open the config/modules/export.cfg and define a new export provider:</p>
+
+<pre><code>endnote.xslt = config/crosswalks/export/endnote.xsl
+endnote.mimeType = application/x-Research-Info-Systems
+endnote.extension = ris
+</code></pre>
+
+<p>Add the (unique) id to the list of available export formats</p>
+
+<pre><code>list = bibtex, endnote
+</code></pre>
+
+<p><strong>NOTE</strong>: To add the icon image, just add an image at the following path - [jspui-webapp]/image/sharing/endnote.png </p>
+
+<hr><p><img src="http://www.lyncode.com/images/lyncode/DevelopedBy.png" alt="Developed by Lyncode"> in partnership with <img src="http://pesquisa.biblioteca.iscte.pt/_img/logos/logo_rcaap.png" alt="RCAAP Project"></p>
+      </section>
+      <footer>
+        <p>This project is maintained by <a href="https://github.com/lyncode">lyncode</a></p>
+        <p><small>Hosted on GitHub Pages &mdash; Theme by <a href="https://github.com/orderedlist">orderedlist</a></small></p>
+      </footer>
+    </div>
+    <script src="javascripts/scale.fix.js"></script>
+    
+  </body>
+</html>
