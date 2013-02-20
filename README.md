@@ -18,7 +18,7 @@ There are two major functionalities, (1) the sharing functionality and (2) the e
 Which DSpace version?
 ==========
 
-DSpace 3.1 (need support for another version? Please, contact [general@lyncode.com](mailto:general@lyncode.com)
+DSpace 3.1 (need support for another version? Please, contact [general@lyncode.com](mailto:general@lyncode.com))
 
 Installation
 ==========
