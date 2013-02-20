@@ -49,5 +49,4 @@ Add the (unique) id to the list of available export formats
 
 **NOTE**: To add the icon image, just add an image at the following path - [jspui-webapp]/image/sharing/endnote.png 
 
-
-![Developed by Lyncode](http://www.lyncode.com/images/lyncode/DevelopedBy.png)
+![Developed by Lyncode](http://www.lyncode.com/images/lyncode/DevelopedBy.png) in partnership with ![RCAAP Project](http://pesquisa.biblioteca.iscte.pt/_img/logos/logo_rcaap.png)
